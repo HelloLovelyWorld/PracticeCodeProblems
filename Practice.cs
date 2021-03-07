@@ -4,23 +4,17 @@ namespace Practice_CodingProblems
 {
     class Practice
     {
-        // Write a method that displays the longest word in a sentence.
+        // Write a method that prints out a reversed string.
         static void Main(string[] args)
         {
-            string mySentence = "I love technology.";
-            var largestWord = " ";
-            string[] array = mySentence.Split(' ');
+            var word = "technology";
+            var wordTochar = word.ToCharArray();
+            var length = wordTochar.Length;
 
-
-            for (int i = 0; i < array.Length; i++)
+            for (int i = length - 1; i >= 0; i--)
             {
-                if (array[i].Length >largestWord.Length)
-                {
-                    largestWord = array[i];
-                }
+                Console.Write(wordTochar[i]);
             }
-            Console.WriteLine($"The sentence is: \"{mySentence}\"");
-            Console.WriteLine($"The largest word in this sentence is: {largestWord}");
         }
     }
 }
