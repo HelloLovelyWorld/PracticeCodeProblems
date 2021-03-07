@@ -4,17 +4,13 @@ namespace Practice_CodingProblems
 {
     class Practice
     {
-        // How to print out a reversed string.
+        // Write a method to find the length of a string.
         static void Main(string[] args)
         {
             string myString = "Hello World";
-            var characters = myString.ToCharArray();
-            var length = characters.Length;
+            var length = myString.Length;
 
-            for (var i = length - 1; i >= 0; i--)
-            {
-                Console.Write(characters[i]);
-            }
+            Console.WriteLine($"This phrase is {length} characters long.");
         }
     }
 }
