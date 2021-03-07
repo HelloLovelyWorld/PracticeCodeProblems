@@ -4,13 +4,23 @@ namespace Practice_CodingProblems
 {
     class Practice
     {
-        // Write a method to find the length of a string.
+        // Write a method that displays the longest word in a sentence.
         static void Main(string[] args)
         {
-            string myString = "Hello World";
-            var length = myString.Length;
+            string mySentence = "I love technology.";
+            var largestWord = " ";
+            string[] array = mySentence.Split(' ');
 
-            Console.WriteLine($"This phrase is {length} characters long.");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i].Length >largestWord.Length)
+                {
+                    largestWord = array[i];
+                }
+            }
+            Console.WriteLine($"The sentence is: \"{mySentence}\"");
+            Console.WriteLine($"The largest word in this sentence is: {largestWord}");
         }
     }
 }
